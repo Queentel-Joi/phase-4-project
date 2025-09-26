@@ -5,6 +5,7 @@ function Signup({ setUser }) {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
@@ -12,7 +13,7 @@ function Signup({ setUser }) {
     fetch('/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, email }),
+      body: JSON.stringify({ username, email, password }),
     })
       .then(r => r.json())
       .then(data => {
@@ -43,6 +44,16 @@ function Signup({ setUser }) {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="..."
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
           />
         </div>
         <button type="submit" className="btn">Signup</button>

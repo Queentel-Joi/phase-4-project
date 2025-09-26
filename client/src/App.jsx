@@ -7,6 +7,8 @@ import Signup from './components/Signup';
 import Books from './components/Books';
 import BookDetail from './components/BookDetail';
 import AddBook from './components/AddBook';
+import "./App.css";
+
 
 function App() {
   const [user, setUser] = useState(null);
