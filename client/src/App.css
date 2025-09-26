@@ -133,7 +133,7 @@ nav button:hover {
   border-color: #3498db;
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
   transform: translateY(-2px);
-}
+ }
 
 .form-group textarea {
   resize: vertical;
